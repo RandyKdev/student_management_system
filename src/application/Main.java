@@ -13,8 +13,10 @@ public class Main extends Application {
 		try {
 			// Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
 			// Scene scene = new Scene(root,600,400); // for login
-			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // error
-			Scene scene = new Scene(root,640,285); // for error
+//			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // error
+//			Scene scene = new Scene(root,640,285); // for error
+			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // error
+			Scene scene = new Scene(root,699,249); // for error
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
