@@ -11,8 +11,20 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("registration.fxml"));
-			Scene scene = new Scene(root,600,400);
+
+			//Parent root = FXMLLoader.load(getClass().getResource("registration.fxml"));
+			//Scene scene = new Scene(root,600,400);
+//			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
+//			 Scene scene = new Scene(root,600,400); // for login
+			Parent root = FXMLLoader.load(getClass().getResource("registrationResult.fxml")); // for error
+			Scene scene = new Scene(root,640,285); // for error
+//			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // for forgot password
+//			Scene scene = new Scene(root,699,249); // for forgot password
+//			Parent root = FXMLLoader.load(getClass().getResource("new_password.fxml")); // for new password
+//			Scene scene = new Scene(root,600,237); // for new password
+//			Parent root = FXMLLoader.load(getClass().getResource("register_decision.fxml")); // for register decision
+//			Scene scene = new Scene(root,588,324); // for register decision
+
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
