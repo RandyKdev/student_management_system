@@ -30,7 +30,7 @@
                         <Font name="System Bold" size="26.0" />
                      </font>
                   </Label>
-                  <Label layoutX="47.0" layoutY="118.0" text="Username / Email" />
+                  <Label layoutX="47.0" layoutY="118.0" text="Email" />
                   <TextField layoutX="46.0" layoutY="135.0" prefHeight="33.0" prefWidth="262.0" />
                   <Label layoutX="47.0" layoutY="182.0" text="Password" />
                   <TextField layoutX="46.0" layoutY="199.0" prefHeight="33.0" prefWidth="262.0" />
