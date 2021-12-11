@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,9 +12,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane prefHeight="500.0" prefWidth="600.0">
+      <ScrollPane prefHeight="400.0" prefWidth="600.0">
          <content>
             <Pane layoutX="20.0" prefHeight="500.0" prefWidth="581.0">
                <children>
@@ -85,7 +86,11 @@
                         <TextField layoutX="83.0" layoutY="99.0" prefHeight="31.0" prefWidth="166.0" />
                      </children>
                   </Group>
-                  <Button layoutX="213.0" layoutY="425.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #0d9b4f;" text="Register" textFill="WHITE" />
+                  <Button layoutX="213.0" layoutY="425.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #0d9b4f;" text="Register" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
          </content>
