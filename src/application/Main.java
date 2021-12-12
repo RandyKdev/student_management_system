@@ -1,5 +1,8 @@
 package application;
 	
+import java.sql.Connection;
+import java.sql.Statement;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -23,11 +26,16 @@ public class Main extends Application {
 //			Scene scene = new Scene(root,588,324); // for register decision
 //			Parent root = FXMLLoader.load(getClass().getResource("register_lecturer.fxml")); // for register lecturer
 //			Scene scene = new Scene(root,600,500); // for register lecturer
-			Parent root = FXMLLoader.load(getClass().getResource("register_admin.fxml")); // for register admin
-			Scene scene = new Scene(root,600,355); // for register admin
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+//			Parent root = FXMLLoader.load(getClass().getResource("register_admin.fxml")); // for register admin
+//			Scene scene = new Scene(root,600,355); // for register admin
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			primaryStage.setScene(scene);
+//			primaryStage.show();
+			DBConnection dbConnection = new DBConnection();
+			dbConnection.instantiateDB();
+			Connection con =dbConnection.getDbConnection();
+			if(con != null) System.out.println("connected");
+			con.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
