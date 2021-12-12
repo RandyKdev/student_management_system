@@ -3,6 +3,7 @@ package application;
 import java.sql.Connection;
 import java.sql.Statement;
 
+import database.DBConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -14,8 +15,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
-//			 Scene scene = new Scene(root,600,400); // for login
+			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
+			 Scene scene = new Scene(root,600,400); // for login
 //			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // for error
 //			Scene scene = new Scene(root,640,285); // for error
 //			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // for forgot password
@@ -28,9 +29,9 @@ public class Main extends Application {
 //			Scene scene = new Scene(root,600,500); // for register lecturer
 //			Parent root = FXMLLoader.load(getClass().getResource("register_admin.fxml")); // for register admin
 //			Scene scene = new Scene(root,600,355); // for register admin
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//			primaryStage.setScene(scene);
-//			primaryStage.show();
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
 			DBConnection dbConnection = new DBConnection();
 			dbConnection.instantiateDB();
 			Connection con =dbConnection.getDbConnection();
