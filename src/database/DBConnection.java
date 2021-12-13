@@ -28,13 +28,16 @@ public class DBConnection {
 			if(!found) {
 			String sql = "CREATE DATABASE sunshine;";
 			statement.execute(sql);
+			sql = "use sunshine;";
+			statement.execute(sql);
+			sql = "CREATE TABLE user (email VARCHAR(50) PRIMARY KEY, password VARCHAR(50) NOT NULL);";
 			statement.execute(sql);
 			}
 		connection.close();
 	}
 	
 	// gets sunshine db connection
-	public Connection getDbConnection() throws SQLException {
+	public Connection getDbConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+dbName, userName, pwd);
@@ -46,7 +49,6 @@ public class DBConnection {
 			e.printStackTrace();
 		}
 		
-		if(connection == null) throw new SQLException("Error creating connection to db");
 		return connection;
 	}
 	

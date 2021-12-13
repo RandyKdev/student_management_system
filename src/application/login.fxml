@@ -5,10 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginLogic">
    <children>
       <SplitPane dividerPositions="0.40301003344481606" layoutX="6.0" prefHeight="400.0" prefWidth="600.0">
         <items>
@@ -31,18 +32,18 @@
                      </font>
                   </Label>
                   <Label layoutX="47.0" layoutY="118.0" text="Email" />
-                  <TextField layoutX="46.0" layoutY="135.0" prefHeight="33.0" prefWidth="262.0" />
+                  <TextField fx:id="login_screen_email_field" layoutX="46.0" layoutY="135.0" prefHeight="33.0" prefWidth="262.0" />
                   <Label layoutX="47.0" layoutY="182.0" text="Password" />
-                  <TextField layoutX="46.0" layoutY="199.0" prefHeight="33.0" prefWidth="262.0" />
-                  <Button layoutX="79.0" layoutY="286.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="197.0" style="-fx-background-color: #08ae54;" text="Login" textFill="WHITE">
+                  <PasswordField fx:id="login_screen_password_field" layoutX="46.0" layoutY="199.0" onKeyTyped="#onPwdFieldChange" prefHeight="33.0" prefWidth="262.0" />
+                  <Button layoutX="79.0" layoutY="286.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="33.0" prefWidth="197.0" style="-fx-background-color: #08ae54;" text="Login" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button layoutX="44.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-padding: 0; -fx-padding: 2 0;" text="Forgort password?" textFill="#0d9b4f">
+                  <Button layoutX="44.0" layoutY="238.0" mnemonicParsing="false" onAction="#onForgotPwd" style="-fx-background-color: transparent; -fx-padding: 0; -fx-padding: 2 0;" text="Forgort password?" textFill="#0d9b4f">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button layoutX="221.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: transaparent; -fx-padding: 0;" text="Register" textFill="#0d9b4f">
+                  <Button layoutX="221.0" layoutY="337.0" mnemonicParsing="false" onAction="#onRegister" style="-fx-background-color: transaparent; -fx-padding: 0;" text="Register" textFill="#0d9b4f">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>

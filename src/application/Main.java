@@ -1,7 +1,6 @@
 package application;
 	
 import java.sql.Connection;
-import java.sql.Statement;
 
 import database.DBConnection;
 import javafx.application.Application;
