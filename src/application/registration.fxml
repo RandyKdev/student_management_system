@@ -10,14 +10,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1242.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="475.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="298.0" />
-      <Rectangle arcHeight="5.0" arcWidth="20.0" height="483.0" layoutX="317.0" layoutY="18.0" stroke="#0dab4f" strokeType="INSIDE" width="899.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="475.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="298.0" />
+      <Rectangle arcHeight="5.0" arcWidth="20.0" fill="#eeeeee" height="483.0" layoutX="317.0" layoutY="18.0" stroke="#0dab4f" strokeType="INSIDE" width="899.0" />
       <ImageView fitHeight="247.0" fitWidth="248.0" layoutX="25.0" layoutY="94.0" pickOnBounds="true">
 	      <image>
             <Image url="@../../images/registration.png" />
 	        </image>
       </ImageView>
-      <Label layoutX="51.0" layoutY="36.0" prefHeight="36.0" prefWidth="228.0" text="SUNSHINE" textAlignment="JUSTIFY" textFill="#f8f6f4">
+      <Label layoutX="51.0" layoutY="36.0" prefHeight="36.0" prefWidth="228.0" text="SUNSHINE" textAlignment="JUSTIFY">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
@@ -38,46 +38,46 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="327.0" layoutY="101.0" prefHeight="39.0" prefWidth="126.0" text="Student Name" textFill="WHITE">
+      <Label layoutX="327.0" layoutY="101.0" prefHeight="39.0" prefWidth="126.0" text="Student Name">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="39.0" layoutX="478.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="39.0" layoutX="478.0" layoutY="101.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" width="228.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="39.0" layoutX="478.0" layoutY="156.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="327.0" layoutY="156.0" prefHeight="39.0" prefWidth="119.0" text=" Email" textFill="WHITE">
+      <Label layoutX="327.0" layoutY="156.0" prefHeight="39.0" prefWidth="119.0" text=" Email">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="39.0" layoutX="478.0" layoutY="213.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="315.0" layoutY="215.0" prefHeight="35.0" prefWidth="119.0" text="PassWord" textFill="WHITE">
+      <Label layoutX="327.0" layoutY="215.0" prefHeight="35.0" prefWidth="126.0" text="PassWord">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="478.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="327.0" layoutY="286.0" prefHeight="35.0" prefWidth="119.0" text="Confirm" textFill="WHITE">
+      <Label layoutX="327.0" layoutY="286.0" prefHeight="35.0" prefWidth="119.0" text="Confirm">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="478.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="321.0" layoutY="341.0" prefHeight="45.0" prefWidth="119.0" text="Matricule N" textFill="WHITE">
+      <Label layoutX="321.0" layoutY="341.0" prefHeight="45.0" prefWidth="119.0" text="Matricule N">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="478.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="321.0" layoutY="401.0" prefHeight="39.0" prefWidth="119.0" text="Cycle" textFill="WHITE">
+      <Label layoutX="321.0" layoutY="401.0" prefHeight="39.0" prefWidth="119.0" text="Cycle">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="478.0" layoutY="454.0" stroke="BLACK" strokeType="INSIDE" width="228.0" />
-      <Label layoutX="326.0" layoutY="459.0" prefHeight="35.0" prefWidth="98.0" text="Department" textFill="WHITE">
+      <Label layoutX="326.0" layoutY="459.0" prefHeight="35.0" prefWidth="98.0" text="Department">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="962.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
@@ -86,39 +86,39 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="962.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="962.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="962.0" layoutY="405.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
-      <Label layoutX="756.0" layoutY="103.0" prefHeight="35.0" prefWidth="177.0" text="Place Of Birth" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="103.0" prefHeight="35.0" prefWidth="177.0" text="Place Of Birth">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Line endX="-21.0" endY="335.0" fill="WHITE" layoutX="759.0" layoutY="153.0" startX="-21.0" startY="-43.0" stroke="WHITE" strokeWidth="4.0" />
-      <Label layoutX="756.0" layoutY="162.0" prefHeight="35.0" prefWidth="177.0" text="Date Of Birth" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="162.0" prefHeight="35.0" prefWidth="177.0" text="Date Of Birth">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="756.0" layoutY="223.0" prefHeight="35.0" prefWidth="177.0" text="Nationality" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="223.0" prefHeight="35.0" prefWidth="177.0" text="Nationality">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="756.0" layoutY="282.0" prefHeight="35.0" prefWidth="177.0" text="Parent Name" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="282.0" prefHeight="35.0" prefWidth="177.0" text="Parent Name">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="756.0" layoutY="345.0" prefHeight="35.0" prefWidth="177.0" text="Certificate Aqui" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="345.0" prefHeight="35.0" prefWidth="177.0" text="Certificate Aqui">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="756.0" layoutY="410.0" prefHeight="35.0" prefWidth="177.0" text="Papers Passed" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="410.0" prefHeight="35.0" prefWidth="177.0" text="Papers Passed">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="45.0" layoutX="962.0" layoutY="454.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
-      <Label layoutX="756.0" layoutY="459.0" prefHeight="35.0" prefWidth="177.0" text="Marital Status" textFill="WHITE">
+      <Label layoutX="756.0" layoutY="459.0" prefHeight="35.0" prefWidth="177.0" text="Marital Status">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
