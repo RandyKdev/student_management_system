@@ -14,8 +14,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
-			 Scene scene = new Scene(root,600,400); // for login
+//			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
+//			 Scene scene = new Scene(root,600,400); // for login
 //			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // for error
 //			Scene scene = new Scene(root,640,285); // for error
 //			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // for forgot password
@@ -24,6 +24,8 @@ public class Main extends Application {
 //			Scene scene = new Scene(root,600,237); // for new password
 //			Parent root = FXMLLoader.load(getClass().getResource("register_decision.fxml")); // for register decision
 //			Scene scene = new Scene(root,588,324); // for register decision
+			Parent root = FXMLLoader.load(getClass().getResource("login_decision.fxml")); // for login decision
+			Scene scene = new Scene(root,588,324); // for login decision
 //			Parent root = FXMLLoader.load(getClass().getResource("register_lecturer.fxml")); // for register lecturer
 //			Scene scene = new Scene(root,600,500); // for register lecturer
 //			Parent root = FXMLLoader.load(getClass().getResource("register_admin.fxml")); // for register admin
