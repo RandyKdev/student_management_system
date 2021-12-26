@@ -30,4 +30,47 @@ public class UserDB {
 			return false;
 		}
 	}
+	
+	public boolean exists(String email) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT email FROM user "
+				     + "WHERE email = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, email);
+			
+			statement.executeQuery();
+			
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean onAdd(String email, String pwd) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql = "INSERT INTO user"
+					+ "(email, password)"
+					+ "VALUES"
+					+ "(?, ?);";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, email);
+			statement.setString(2, pwd);
+			
+			statement.executeQuery();
+			
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

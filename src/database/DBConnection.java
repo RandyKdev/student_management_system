@@ -17,22 +17,32 @@ public class DBConnection {
 		createConnection();
 		if(connection == null) throw new SQLException("Error creating connection to db");
 		Statement statement;
+		String sql;
 		boolean found = false;
-			statement = connection.createStatement();
-			ResultSet rs = connection.getMetaData().getCatalogs();
-			while(rs.next()) {
-				if(dbName.equals(rs.getString(1))) {
-					found = true;
-				}
+		statement = connection.createStatement();
+		ResultSet rs = connection.getMetaData().getCatalogs();
+		while(rs.next()) {
+			if(dbName.equals(rs.getString(1))) {
+				found = true;
 			}
-			if(!found) {
-			String sql = "CREATE DATABASE sunshine;";
+		}
+			
+		if(found) {
+			sql = "DROP DATABASE sunshine;";
 			statement.execute(sql);
-			sql = "use sunshine;";
-			statement.execute(sql);
-			sql = "CREATE TABLE user (email VARCHAR(50) PRIMARY KEY, password VARCHAR(50) NOT NULL);";
-			statement.execute(sql);
-			}
+		}
+			
+		sql = "CREATE DATABASE sunshine;";
+		statement.execute(sql);
+		sql = "use sunshine;";
+		statement.execute(sql);
+		sql = "CREATE TABLE admin (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, created_at DATE NOT NULL);";
+		statement.execute(sql);
+		sql = "CREATE TABLE lecturer (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, created_at DATE NOT NULL);";
+		statement.execute(sql);
+		sql = "CREATE TABLE student (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, created_at DATE NOT NULL);";
+		statement.execute(sql);
+		
 		connection.close();
 	}
 	
