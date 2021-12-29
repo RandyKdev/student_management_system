@@ -40,8 +40,11 @@ public class DBConnection {
 		statement.execute(sql);
 		sql = "CREATE TABLE lecturer (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, level VARCHAR(20) NOT NULL, field VARCHAR(50) NOT NULL, created_at DATE NOT NULL);";
 		statement.execute(sql);
-		sql = "CREATE TABLE student (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, created_at DATE NOT NULL);";
+		sql = "CREATE TABLE student (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, level INT NOT NULL, qualification VARCHAR(30) NOT NULL, created_at DATE NOT NULL);";
 		statement.execute(sql);
+		
+		// loads dummy Data
+		new dummyDB();
 		
 		connection.close();
 	}
