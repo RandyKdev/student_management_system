@@ -79,7 +79,7 @@ public class lecturerDB {
 		   
 			statement.setDate(8, date);
 			
-			statement.executeQuery();
+			statement.execute();
 			
 			connection.close();
 			return true;

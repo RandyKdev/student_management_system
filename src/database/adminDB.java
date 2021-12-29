@@ -77,7 +77,7 @@ public class adminDB {
 		   
 			statement.setDate(6, date);
 			
-			statement.executeQuery();
+			statement.execute();
 			
 			connection.close();
 			return true;

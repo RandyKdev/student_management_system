@@ -1,6 +1,6 @@
 package application;
 
-import database.UserDB;
+import database.adminDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -25,7 +25,7 @@ public class LoginLogic {
 	   
 	   System.out.println("Login Clicked");
 	   
-	   UserDB userDB = new UserDB();
+	   adminDB userDB = new adminDB();
 	   boolean loggedIn = userDB.onLogin(email.trim(), pwd);
 	   if(loggedIn) {
 		   
