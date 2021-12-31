@@ -20,7 +20,10 @@ public class LoginLogic {
 	   String pwd = login_screen_password_field.getText();
 	   
 	   if(!EmailValidator.isValid(email)) {
-		   // return error screen
+//		   return;
+		   ErrorScreen errorScreen = new ErrorScreen();
+		   errorScreen.show(event, "Email not in right format", "Try entering a correct email");
+		   return;
 	   }
 	   
 	   System.out.println("Login Clicked");
@@ -32,6 +35,9 @@ public class LoginLogic {
 		   // remove current screen and navigate to appropriate screen
 	   } else {
 		   // show error screen
+		   ErrorScreen errorScreen = new ErrorScreen();
+		   errorScreen.show(event, "Email or Password Incorrect", "If it persists consider registering or resetting your password");
+		   return;
 	   }
    }
 	@FXML
