@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 public class LoginLogic {
 	public LoginLogic() {}
 	
+	
 	@FXML
    private TextField login_screen_email_field;
 	@FXML
@@ -22,23 +23,14 @@ public class LoginLogic {
 	   if(!EmailValidator.isValid(email)) {
 //		   return;
 		   ErrorScreen errorScreen = new ErrorScreen();
-		   errorScreen.show(event, "Email not in right format", "Try entering a correct email");
+		   errorScreen.show("Email not in right format", "Try entering a correct email");
 		   return;
 	   }
 	   
 	   System.out.println("Login Clicked");
 	   
-	   adminDB userDB = new adminDB();
-	   boolean loggedIn = userDB.onLogin(email.trim(), pwd);
-	   if(loggedIn) {
-		   
-		   // remove current screen and navigate to appropriate screen
-	   } else {
-		   // show error screen
-		   ErrorScreen errorScreen = new ErrorScreen();
-		   errorScreen.show(event, "Email or Password Incorrect", "If it persists consider registering or resetting your password");
-		   return;
-	   }
+	   LoginDecision loginDecision = new LoginDecision();
+	   loginDecision.show(event, email.trim(), pwd);
    }
 	@FXML
    private void onRegister(ActionEvent event) {

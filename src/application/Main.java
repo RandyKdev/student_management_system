@@ -14,8 +14,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			 Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
-			 Scene scene = new Scene(root, 600, 400); // for login
+			Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
+			Scene scene = new Scene(root, 600, 400); // for login
 //			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // for error
 //			Scene scene = new Scene(root, 640, 285); // for error
 //			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // for forgot password
@@ -35,11 +35,11 @@ public class Main extends Application {
 			primaryStage.setTitle("Sunshine");
 			primaryStage.setResizable(false);
 			primaryStage.show();
-			DBConnection dbConnection = new DBConnection();
-			dbConnection.instantiateDB();
-			Connection con =dbConnection.getDbConnection();
-			if(con != null) System.out.println("connected");
-			con.close();
+//			DBConnection dbConnection = new DBConnection();
+//			dbConnection.instantiateDB();
+//			Connection con =dbConnection.getDbConnection();
+//			if(con != null) System.out.println("connected");
+//			con.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

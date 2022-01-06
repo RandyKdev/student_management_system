@@ -18,7 +18,7 @@ public class SuccessScreen {
 		message.setText(successMessage);
 	}
 	
-	public void show(ActionEvent event, String successMessage) {
+	public void show(String successMessage) {
 		 Parent root;
 	        try {
 	        	FXMLLoader loader = new FXMLLoader(getClass().getResource("success.fxml"));
@@ -28,7 +28,7 @@ public class SuccessScreen {
 	            successScreen.setMessage(successMessage);
 	           
 	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
-	            stage.setScene(new Scene(root, 640, 285));
+	            stage.setScene(new Scene(root, 608, 226));
 	            stage.show();
 	            
 	            // Hide this current window (if this is what you want)
