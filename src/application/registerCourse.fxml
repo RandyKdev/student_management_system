@@ -33,7 +33,27 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="305.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="548.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="548.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
-      <Hyperlink layoutX="308.0" layoutY="255.0" prefHeight="54.0" prefWidth="158.0" text="Registration Info" textFill="WHITE">
+      <Hyperlink layoutX="305.0" layoutY="255.0" prefHeight="54.0" prefWidth="136.0" text="Main Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="543.0" layoutY="255.0" prefHeight="54.0" prefWidth="169.0" text="Minor Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="54.0" layoutY="422.0" prefHeight="54.0" prefWidth="145.0" text="Comp Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="301.0" layoutY="422.0" prefHeight="54.0" prefWidth="169.0" text="Registration Info" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="543.0" layoutY="422.0" prefHeight="54.0" prefWidth="169.0" text="Final Courses" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
