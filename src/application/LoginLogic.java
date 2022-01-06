@@ -38,7 +38,8 @@ public class LoginLogic {
    }
 	@FXML
    private void onForgotPwd(ActionEvent event) {
-	   System.out.println("Forgot Password Clicked");
+		ForgotPassword forgotPassword = new ForgotPassword();
+		forgotPassword.show();
    }
 	@FXML
 	private void onPwdFieldChange() {
