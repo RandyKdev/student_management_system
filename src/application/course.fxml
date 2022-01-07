@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="80.0" layoutX="23.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="623.0" />
+      <Label layoutX="174.0" layoutY="32.0" prefHeight="70.0" prefWidth="360.0" text="Register Courses" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="377.0" layoutX="6.0" layoutY="154.0" stroke="BLACK" strokeType="INSIDE" width="635.0" />
+      <Line endX="316.5" layoutX="346.0" layoutY="125.0" startX="-327.0" />
+      <Line endX="329.0" layoutX="312.0" layoutY="197.0" startX="-306.0" />
+      <Line endX="328.5" layoutX="311.0" layoutY="246.0" startX="-306.0" />
+      <Line endX="329.0" layoutX="312.0" layoutY="299.0" startX="-306.0" />
+      <Line endX="317.0" endY="9.0" layoutX="324.0" layoutY="343.0" startX="-318.0" startY="-0.5" />
+      <Line endX="346.0" endY="-8.0" layoutX="295.0" layoutY="410.0" startX="-289.0" startY="-8.0" />
+      <Line endX="328.5" layoutX="312.0" layoutY="453.0" startX="-306.0" />
+      <Line endX="333.0" endY="-7.0" layoutX="308.0" layoutY="508.0" startX="-302.0" startY="-7.0" />
+      <Line endX="100.0" endY="-56.0" layoutX="217.0" layoutY="210.0" startX="100.0" startY="315.0" />
+      <Line endX="100.0" endY="-56.0" layoutX="382.0" layoutY="210.0" startX="100.0" startY="315.0" />
+      <Line endX="100.0" endY="-56.0" layoutX="540.0" layoutY="210.0" startX="100.0" startY="315.0" />
+      <Line endX="100.0" endY="-56.0" layoutX="-53.0" layoutY="210.0" startX="100.0" startY="321.0" />
+      <Label layoutX="6.0" layoutY="162.0" text="SN" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="198.0" text="1" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="260.0" text="2" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="307.0" text="3" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="356.0" text="4" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="411.0" text="5" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="465.0" text="6" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="162.0" prefHeight="35.0" prefWidth="173.0" text="Course Name" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="162.0" prefHeight="35.0" prefWidth="149.0" text="Credit Value" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="162.0" prefHeight="35.0" prefWidth="90.0" text="Action" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="83.0" layoutX="516.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/plus.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
