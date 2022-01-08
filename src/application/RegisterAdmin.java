@@ -25,7 +25,7 @@ public class RegisterAdmin {
 	@FXML
 	private TextField last_name_field;
 	@FXML
-	public ComboBox<String> sex_field;
+	private ComboBox<String> sex_field;
 	@FXML
 	private DatePicker dob_field;
 	@FXML
@@ -35,6 +35,11 @@ public class RegisterAdmin {
 	@FXML
 	private PasswordField knfrm_pwd_field;
 	
+	
+	public void setComboBox() {
+		String s[] = {"M", "F"}; 
+		 sex_field.setItems(FXCollections.observableArrayList(s));
+	}
 	
 	@FXML
 	private void onRegister(ActionEvent event) {
@@ -56,6 +61,13 @@ public class RegisterAdmin {
 			 ErrorScreen errorScreen = new ErrorScreen();
 			 errorScreen.show("Last Name Empty", "Please enter your last name");
 			 return;
+		}
+		
+		String sex = sex_field.getValue();
+		if(!(sex.compareTo("M") == 0 || sex.compareTo("F") == 0)) {
+			ErrorScreen errorScreen = new ErrorScreen();
+			errorScreen.show("Invalid sex", "Please choose your sex from the dropdown");
+			return;
 		}
 		
 		if(dob == null) {
@@ -121,15 +133,12 @@ public class RegisterAdmin {
 	            root = loader.load();
 	            
 	            RegisterAdmin registerAdmin = loader.getController();
-	            String s[] = {"M", "F"}; 
-	            registerAdmin.sex_field = new ComboBox<String>();
-	            registerAdmin.sex_field.setItems(FXCollections.observableArrayList(s));
-//	            registerAdmin.sex_field = new ComboBox<String>(FXCollections.observableArrayList(s));
+	            registerAdmin.setComboBox();
 	            
 	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
 	            stage.setScene(new Scene(root, 600, 355));
 	            stage.show();
-	            
+//	            
 //	            Hide this current window (if this is what you want)
 //	            ((Node)(event.getSource())).getScene().getWindow().hide();
 	        }
