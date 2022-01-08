@@ -28,7 +28,7 @@ public class NewPassword {
 		String pwd = pwd_field.getText();
 		String knfrm_pwd = knfrm_pwd_field.getText();
 		
-		if(pwd.isEmpty()) {
+		if(pwd.isBlank()) {
 			 ErrorScreen errorScreen = new ErrorScreen();
 			 errorScreen.show("Password Field Empty", "Please enter a password");
 			 return;
@@ -36,7 +36,7 @@ public class NewPassword {
 		
 		if(pwd.compareTo(knfrm_pwd) != 0) {
 			ErrorScreen errorScreen = new ErrorScreen();
-			errorScreen.show("Passwords donot match", "Check your entries for the passwords");
+			errorScreen.show("Passwords Donot Match", "Check your entries for the passwords");
 			return;
 		}
 		

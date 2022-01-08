@@ -34,15 +34,13 @@ public class LoginLogic {
    }
 	@FXML
    private void onRegister(ActionEvent event) {
-	   System.out.println("Register Clicked");
+	   RegisterDecision registerDecision = new RegisterDecision();
+	   registerDecision.show();
    }
+	
 	@FXML
    private void onForgotPwd(ActionEvent event) {
 		ForgotPassword forgotPassword = new ForgotPassword();
 		forgotPassword.show();
    }
-	@FXML
-	private void onPwdFieldChange() {
-		System.out.println("pwd changes");
-	}
 }
