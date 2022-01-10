@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="250.0" layoutX="149.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="438.0" />
+      <Label layoutX="234.0" layoutY="21.0" prefHeight="53.0" prefWidth="269.0" text="Exam Question">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="269.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/plus.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="77.0" layoutX="644.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/X.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="37.0" layoutX="26.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="37.0" layoutX="153.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="37.0" layoutX="292.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="37.0" layoutX="419.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="37.0" layoutX="551.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Label layoutX="64.0" layoutY="371.0" prefHeight="17.0" prefWidth="58.0" text="pdf">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="371.0" prefHeight="17.0" prefWidth="58.0" text="txt">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="371.0" prefHeight="17.0" prefWidth="58.0" text="docs">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="448.0" layoutY="371.0" prefHeight="17.0" prefWidth="58.0" text="ppt">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="371.0" prefHeight="17.0" prefWidth="58.0" text="exe">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

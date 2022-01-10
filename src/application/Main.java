@@ -23,14 +23,9 @@ public class Main extends Application {
 //			Parent root = FXMLLoader.load(getClass().getResource("new_password.fxml")); // for new password
 //			Scene scene = new Scene(root, 600, 237); // for new password
 //			Parent root = FXMLLoader.load(getClass().getResource("register_decision.fxml")); // for register decision
-//			Scene scene = new Scene(root, 588, 324); // for register decision
-//			Parent root = FXMLLoader.load(getClass().getResource("login_decision.fxml")); // for login decision
-//			Scene scene = new Scene(root, 588, 324); // for login decision
-//			Parent root = FXMLLoader.load(getClass().getResource("register_lecturer.fxml")); // for register lecturer
-//			Scene scene = new Scene(root, 600, 500); // for register lecturer
-//			Parent root = FXMLLoader.load(getClass().getResource("register_admin.fxml")); // for register admin
-//			Scene scene = new Scene(root, 600, 355); // for register admin
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			Scene scene = new Scene(root,588,324); // for register decision
+
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Sunshine");
 			primaryStage.setResizable(false);
