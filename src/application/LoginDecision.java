@@ -27,23 +27,9 @@ public class LoginDecision {
 		   boolean loggedIn = userDB.onLogin(email.trim(), pwd);
 		   if(loggedIn) {
 		
-			   Parent root;
-		        try {
-		        	FXMLLoader loader = new FXMLLoader(getClass().getResource("admin_dashboard.fxml"));
-		            root = loader.load();
-		            
-		            loader.getController();
-		                       
-		            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
-		            stage.setScene(new Scene(root, 700, 800));
-		            stage.show();
-		            
-		            // Hide this current window (if this is what you want)
-//		            ((Node)(event.getSource())).getScene().getWindow().hide();
-		        }
-		        catch (IOException e) {
-		            e.printStackTrace();
-		        }
+			  AdminDashboard adminDash = new AdminDashboard();
+			  adminDash.show();
+			  
 		 	   SuccessScreen successScreen = new SuccessScreen();
 			   successScreen.show("Successfully signed in as an admin");
 			   
