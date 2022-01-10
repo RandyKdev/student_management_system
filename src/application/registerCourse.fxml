@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="98.0" layoutX="20.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="730.0" />
+      <Label layoutX="202.0" layoutY="40.0" prefHeight="70.0" prefWidth="425.0" text="Course Registration" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="350.0" layoutX="23.0" layoutY="194.0" stroke="BLACK" strokeType="INSIDE" width="718.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="35.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="281.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="520.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="38.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="284.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="159.0" layoutX="523.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="47.0" layoutX="60.0" layoutY="267.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Hyperlink layoutX="54.0" layoutY="264.0" prefHeight="54.0" prefWidth="169.0" text="Registration Info" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="60.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="305.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="305.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="548.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#040508" height="54.0" layoutX="548.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Hyperlink layoutX="305.0" layoutY="255.0" prefHeight="54.0" prefWidth="136.0" text="Main Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="543.0" layoutY="255.0" prefHeight="54.0" prefWidth="169.0" text="Minor Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="54.0" layoutY="422.0" prefHeight="54.0" prefWidth="145.0" text="Comp Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="301.0" layoutY="422.0" prefHeight="54.0" prefWidth="169.0" text="Deleted Course" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="543.0" layoutY="422.0" prefHeight="54.0" prefWidth="169.0" text="Final Courses" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
