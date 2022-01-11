@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterAdmin">
    <children>
       <ScrollPane prefHeight="355.0" prefWidth="600.0">
          <content>
@@ -35,10 +36,10 @@
                         <Label layoutY="74.0" opacity="0.8" text="Last Name:" />
                         <Label layoutX="1.0" layoutY="106.0" opacity="0.8" text="Sex:" />
                         <Label layoutX="1.0" layoutY="141.0" opacity="0.8" text="DOB:" />
-                        <TextField layoutX="83.0" layoutY="36.0" prefHeight="29.0" prefWidth="166.0" promptText="John" />
-                        <TextField layoutX="83.0" layoutY="67.0" prefHeight="30.0" prefWidth="166.0" promptText="Doe" />
-                        <DatePicker layoutX="83.0" layoutY="134.0" prefHeight="31.0" prefWidth="166.0" promptText="Select Date of Birth" />
-                        <ComboBox editable="true" layoutX="83.0" layoutY="99.0" prefHeight="31.0" prefWidth="166.0" promptText="Select Sex" />
+                        <TextField fx:id="first_name_field" layoutX="83.0" layoutY="36.0" prefHeight="29.0" prefWidth="166.0" promptText="John" />
+                        <TextField fx:id="last_name_field" layoutX="83.0" layoutY="67.0" prefHeight="30.0" prefWidth="166.0" promptText="Doe" />
+                        <ComboBox fx:id="sex_field" editable="true" layoutX="83.0" layoutY="99.0" prefHeight="31.0" prefWidth="166.0" promptText="Select Sex" />
+                        <DatePicker fx:id="dob_field" layoutX="83.0" layoutY="134.0" prefHeight="31.0" prefWidth="166.0" promptText="Select Date of Birth" />
                      </children>
                   </Group>
                   <Separator layoutX="26.0" layoutY="47.0" prefHeight="3.0" prefWidth="533.0" />
@@ -52,12 +53,12 @@
                         <Label layoutY="40.0" opacity="0.8" text="Email:" />
                         <Label layoutY="74.0" opacity="0.8" text="Password:" />
                         <Label layoutX="1.0" layoutY="106.0" opacity="0.8" text="Confirm pwd:" />
-                        <TextField layoutX="83.0" layoutY="36.0" prefHeight="29.0" prefWidth="166.0" promptText="example@example.com" />
-                        <TextField layoutX="83.0" layoutY="67.0" prefHeight="30.0" prefWidth="166.0" />
-                        <TextField layoutX="83.0" layoutY="99.0" prefHeight="31.0" prefWidth="166.0" />
+                        <TextField fx:id="email_field" layoutX="83.0" layoutY="36.0" prefHeight="29.0" prefWidth="166.0" promptText="example@example.com" />
+                        <PasswordField fx:id="pwd_field" layoutX="83.0" layoutY="67.0" prefHeight="30.0" prefWidth="166.0" />
+                        <PasswordField fx:id="knfrm_pwd_field" layoutX="83.0" layoutY="99.0" prefHeight="31.0" prefWidth="166.0" />
                      </children>
                   </Group>
-                  <Button layoutX="213.0" layoutY="271.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #0d9b4f;" text="Register" textFill="WHITE">
+                  <Button layoutX="213.0" layoutY="271.0" mnemonicParsing="false" onAction="#onRegister" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #0d9b4f;" text="Register" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

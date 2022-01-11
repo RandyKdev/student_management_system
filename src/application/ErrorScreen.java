@@ -24,7 +24,7 @@ public class ErrorScreen {
 		subTitle.setText(errorSubtitle);
 	}
 	
-	public void show(ActionEvent event, String errorTitle, String errorSubtitle) {
+	public void show(String errorTitle, String errorSubtitle) {
 		 Parent root;
 	        try {
 	        	FXMLLoader loader = new FXMLLoader(getClass().getResource("error.fxml"));

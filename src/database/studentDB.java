@@ -89,4 +89,26 @@ public class studentDB {
 			return false;
 		}
 	}
+	
+	public boolean updatePassword(String email, String pwd) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql = "UPDATE student "
+					+ "SET password = ? "
+					+ "WHERE email = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, pwd);
+			statement.setString(2, email);
+			
+			statement.execute();
+			
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
 }
