@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="194.0" layoutX="23.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="716.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="113.0" layoutX="26.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="716.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="57.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" width="262.0" />
+      <Label layoutX="68.0" layoutY="71.0" prefHeight="38.0" prefWidth="242.0" text="Assign Course To Lecturer">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="597.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" width="98.0" />
+      <ImageView fitHeight="44.0" fitWidth="58.0" layoutX="622.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/plus.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="443.0" layoutX="296.0" layoutY="250.0" startX="-273.0" />
+      <Line endX="443.0" layoutX="299.0" layoutY="293.0" startX="-273.0" />
+      <Line endX="443.0" layoutX="296.0" layoutY="344.0" startX="-273.0" />
+      <Line endX="443.0" layoutX="299.0" layoutY="394.0" startX="-273.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="278.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="262.0" />
+      <Label layoutX="319.0" layoutY="495.0" prefHeight="45.0" prefWidth="194.0" text="Save Changes" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" endY="-25.0" layoutX="162.0" layoutY="225.0" startX="100.0" startY="169.0" />
+      <Line endX="100.0" endY="-25.0" layoutX="247.0" layoutY="225.0" startX="100.0" startY="169.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="38.0" layoutX="38.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
+      <Label layoutX="50.0" layoutY="207.0" prefHeight="38.0" prefWidth="161.0" text="Course Name">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" layoutX="267.0" layoutY="213.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Label layoutX="271.0" layoutY="210.0" prefHeight="32.0" prefWidth="52.0" text="Code">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="38.0" layoutX="364.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="194.0" />
+      <Label layoutX="376.0" layoutY="210.0" prefHeight="38.0" prefWidth="161.0" text="Lecturerd Name">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" endY="-25.0" layoutX="473.0" layoutY="225.0" startX="100.0" startY="169.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="38.0" layoutX="585.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+      <Label layoutX="605.0" layoutY="210.0" prefHeight="38.0" prefWidth="110.0" text="Action">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="38.0" layoutX="605.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="74.0" />
+      <ImageView fitHeight="32.0" fitWidth="52.0" layoutX="622.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/edit.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
