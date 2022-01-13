@@ -5,8 +5,56 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import application.CourseListTable;
+import application.Lecturer;
+import application.StudentListTable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class lecturerDB {
+	public ObservableList<String> getLecturers() {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql = "SELECT * FROM lecturer;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet result = statement.executeQuery();
+			
+			ObservableList<String> ls = FXCollections.observableArrayList();
+//			ArrayList<Lecturer> ls = new ArrayList<Lecturer>();
+			
+			 while(result.next()) {
+				 ls.add(result.getString("name"));
+			 }
+			 return ls;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public String getName(int id) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM lecturer "
+				     + "WHERE uid = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, id);
+			
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) 
+			return result.getString("name");
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
 	public boolean onLogin(String email, String pwd) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
