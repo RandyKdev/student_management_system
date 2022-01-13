@@ -1,26 +1,24 @@
 package database;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-import application.Student;
+import application.CourseListTable;
 import application.StudentListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.sql.Date;
-
-public class studentDB {
-	public ObservableList<StudentListTable> getStudents() {
+public class courseDB {
+	public ObservableList<StudentListTable> getCoursesFromDepartment(String department) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql = "SELECT * FROM student;";
+			String sql = "SELECT * FROM course WHERE department = ?;";
 			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, department);
 			ResultSet result = statement.executeQuery();
 			
 			ObservableList<StudentListTable> ls = FXCollections.observableArrayList();
@@ -35,15 +33,35 @@ public class studentDB {
 			return null;
 		}
 	}
-	public boolean onLogin(String email, String pwd) {
+	public ObservableList<CourseListTable> getCourses() {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql = "SELECT email, password FROM student "
-				     + "WHERE email = ? AND password = ?;";
+			String sql = "SELECT * FROM course;";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, email);
-			statement.setString(2, pwd);
+			ResultSet result = statement.executeQuery();
+			
+			ObservableList<CourseListTable> ls = FXCollections.observableArrayList();
+			
+			 while(result.next()) {
+				 ls.add(new CourseListTable(result.getString("code"), result.getString("title"), result.getString("department"), result.getInt("credit_value"), result.getInt("lecturer_id")));
+			 }
+			 return ls;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public boolean exists(String code) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT code FROM course "
+				     + "WHERE code = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, code);
+			
 			ResultSet result = statement.executeQuery();
 			
 			if(result.next()) {
@@ -60,55 +78,25 @@ public class studentDB {
 		}
 	}
 	
-	public boolean exists(String email) {
+	public boolean onAdd(String code, String title, int lecturer_id, String department, int credit_value) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql =  "SELECT email FROM student "
-				     + "WHERE email = ?;";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, email);
-			
-			ResultSet result = statement.executeQuery();
-			
-			if(result.next()) {
-				connection.close();
-				return true;
-			}
-			
-			connection.close();
-			return false;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return false;
-		}
-	}
-	
-	public boolean onAdd(String email, String pwd, String name, Date dob, String sex, int level, String qualification, int status, String cycle, String department) {
-		DBConnection con = new DBConnection();
-		Connection connection = con.getDbConnection();
-		try {
-			String sql = "INSERT INTO student"
-					+ "(email, password, name, dob, sex, level, qualification, status, cycle, department, created_at)"
+			String sql = "INSERT INTO course"
+					+ "(code, title, lecturer_id, department, credit_value, created_at)"
 					+ "VALUES"
-					+ "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+					+ "(?, ?, ?, ?, ?, ?);";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, email);
-			statement.setString(2, pwd);
-			statement.setString(3, name);
-			statement.setDate(4, dob);
-			statement.setString(5, sex);
-			statement.setInt(6, level);
-			statement.setString(7, qualification);
-			statement.setInt(8, status);
-			statement.setString(9, cycle);
-			statement.setString(10, department);
+			statement.setString(1, code);
+			statement.setString(2, title);
+			statement.setInt(3, lecturer_id);
+			statement.setString(4, department);
+			statement.setInt(5, credit_value);
 			
 			long millis=System.currentTimeMillis();
 		    Date date=new Date(millis);
 		   
-			statement.setDate(11, date);
+			statement.setDate(6, date);
 			
 			statement.execute();
 			
@@ -121,38 +109,19 @@ public class studentDB {
 		}
 	}
 	
-	public boolean updatePassword(String email, String pwd) {
+	public boolean update(String code, String title, String department, int lecturer_id, int credit_value) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql = "UPDATE student "
-					+ "SET password = ? "
-					+ "WHERE email = ?;";
+			String sql = "UPDATE course "
+					+ "SET title = ?, department = ?, lecturer_id = ?, credit_value = ? "
+					+ "WHERE code = ?;";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, pwd);
-			statement.setString(2, email);
-			
-			statement.execute();
-			
-			connection.close();
-			return true;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return false;
-		}
-	}
-	
-	public boolean updateStatus(int student_id, int status) {
-		DBConnection con = new DBConnection();
-		Connection connection = con.getDbConnection();
-		try {
-			String sql = "UPDATE student "
-					+ "SET status = ? "
-					+ "WHERE uid = ?;";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(1, status);
-			statement.setInt(2, student_id);
+			statement.setString(1, title);
+			statement.setString(2, department);
+			statement.setInt(3, lecturer_id);
+			statement.setInt(4, credit_value);
+			statement.setString(5, code);
 			
 			statement.execute();
 			

@@ -2,12 +2,20 @@ package application;
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class AdminDashboard {
+	@FXML
+	private void show_students(MouseEvent event) {
+		StudentList sl = new StudentList();
+		sl.show();
+	}
 	public void show() {
 		 Parent root;
 	        try {

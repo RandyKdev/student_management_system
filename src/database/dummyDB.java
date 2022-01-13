@@ -8,6 +8,25 @@ public class dummyDB {
 		dummyStudents();
 		dummyLecturers();
 		dummyAdmins();
+		dummyCourses();
+		dummyEnroll();
+	}
+	
+	private void dummyEnroll() {
+		enrollDB enrollDb = new enrollDB();
+		
+		enrollDb.onEnroll("CEF349", 1);
+		enrollDb.onEnroll("EEF347", 2);
+		enrollDb.onEnroll("EEF349", 2);
+	}
+	
+	private void dummyCourses() {
+		courseDB courseDb = new courseDB();
+		
+		courseDb.onAdd("CEF349", "Analysis", 1, "Computer", 4);
+		courseDb.onAdd("EEF347", "Machines", 2, "Electrical", 3);
+		courseDb.onAdd("CEF331", "Operating Systems", 3, "Computer", 2);
+		courseDb.onAdd("EEF349", "Control Engineering", 2, "Electrical", 1);
 	}
 	
 	private void dummyStudents() {
@@ -28,7 +47,7 @@ public class dummyDB {
 			
 	    Date date=new Date(cal.getTimeInMillis());
 	    
-		student.onAdd(email, pwd, name, date, sex, level, qualification);
+		student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Technical Cycle", "Electrical");
 		
 		// 2
 		email = "example1@sdt.com";
@@ -44,7 +63,7 @@ public class dummyDB {
 			
 	    date = new Date(cal.getTimeInMillis());
 		
-	    student.onAdd(email, pwd, name, date, sex, level, qualification);
+	    student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Technical Cycle", "Computer");
 	    
 	    
 		// 3
@@ -61,7 +80,7 @@ public class dummyDB {
 			
 	    date = new Date(cal.getTimeInMillis());
 		
-	    student.onAdd(email, pwd, name, date, sex, level, qualification);
+	    student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Computer Cycle", "Electrical");
 	}
 	
 	private void dummyLecturers() {

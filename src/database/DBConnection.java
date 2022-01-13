@@ -40,7 +40,11 @@ public class DBConnection {
 		statement.execute(sql);
 		sql = "CREATE TABLE lecturer (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, level VARCHAR(50) NOT NULL, field VARCHAR(50) NOT NULL, created_at DATE NOT NULL);";
 		statement.execute(sql);
-		sql = "CREATE TABLE student (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, level INT NOT NULL, qualification VARCHAR(50) NOT NULL, created_at DATE NOT NULL);";
+		sql = "CREATE TABLE student (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, level INT NOT NULL, qualification VARCHAR(50) NOT NULL, status INT NOT NULL, cycle VARCHAR(100) NOT NULL, department VARCHAR(100), created_at DATE NOT NULL);";
+		statement.execute(sql);
+		sql = "CREATE TABLE course (code VARCHAR(6) PRIMARY KEY, title VARCHAR(100) NOT NULL, department VARCHAR(100) NOT NULL, credit_value INT NOT NULL, lecturer_id INT, created_at DATE NOT NULL, FOREIGN KEY (lecturer_id) REFERENCES lecturer(uid));";
+		statement.execute(sql);
+		sql = "CREATE TABLE enroll (student_id INT, course_id VARCHAR(6), marks INT, PRIMARY KEY(student_id, course_id), FOREIGN KEY (student_id) REFERENCES student(uid), FOREIGN KEY (course_id) REFERENCES course(code));";
 		statement.execute(sql);
 		
 		// loads dummy Data
