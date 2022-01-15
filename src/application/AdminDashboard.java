@@ -43,7 +43,7 @@ public class AdminDashboard {
 	            loader.getController();
 	                       
 	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
-	            stage.setScene(new Scene(root, 779, 613));
+	            stage.setScene(new Scene(root, 600, 400));
 	            stage.show();
 	            
 	            // Hide this current window (if this is what you want)
