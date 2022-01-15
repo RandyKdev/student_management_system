@@ -90,7 +90,7 @@ public class StudentList implements Initializable {
 		            }
 		            studentDB student = new studentDB();
 		            
-		            student.updateStatus(rows.get(row.getIndex()).student_id, rows.get(row.getIndex()).status);
+		            student.updateStatus(rows.get(row.getIndex()).student_id, rows.get(row.getIndex()).status == 0 ? 1 : 0);
 		            
 		            rows.set(row.getIndex(), new StudentListTable(rows.get(row.getIndex()).student_id, rows.get(row.getIndex()).name, rows.get(row.getIndex()).status == 0 ? 1 : 0, rows.get(row.getIndex()).department, rows.get(row.getIndex()).cycle, rows.get(row.getIndex()).qualification));
 		           

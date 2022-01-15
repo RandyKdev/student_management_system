@@ -25,27 +25,10 @@ public class RegisterDecision {
 	
 	@FXML
 	private void student(MouseEvent event) {
-		Parent root;
-		try {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("register_lecturer.fxml"));
-        
-			root = loader.load();
-		
-        
-        loader.getController();
-//        String s[] = {"M", "F"}; 
-//        registerAdmin.sex_field = new ComboBox<String>();
-//        registerAdmin.sex_field.setItems(FXCollections.observableArrayList(s));
-//        registerAdmin.sex_field = new ComboBox<String>(FXCollections.observableArrayList(s));
-        
-        Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
-        stage.setScene(new Scene(root, 600, 400));
-        stage.show();
-	} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        
+
+		RegisterStudent student = new RegisterStudent();
+		student.show();
+		((Node)(event.getSource())).getScene().getWindow().hide();
 	}
 	
 	@FXML

@@ -43,7 +43,7 @@ public class CourseList implements Initializable {
 	public void show() {
 		Parent root;
         try {
-        	FXMLLoader loader = new FXMLLoader(getClass().getResource("list_courses.fxml"));
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("list_course.fxml"));
             root = loader.load();
             
             loader.getController();
@@ -91,6 +91,7 @@ public class CourseList implements Initializable {
 		            System.out.println(rows.get(row.getIndex()));
 		            AddCourse add = new AddCourse();
 		    		add.show(table, rows.get(row.getIndex()));
+		    		((Node)(event.getSource())).getScene().getWindow().hide();
 		        }
 		    }
 		});
@@ -102,5 +103,7 @@ public class CourseList implements Initializable {
 	private void onCreate(ActionEvent event) {
 		AddCourse add = new AddCourse();
 		add.show(table, null);
+
+		((Node)(event.getSource())).getScene().getWindow().hide();
 	}
 }

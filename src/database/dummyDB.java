@@ -4,6 +4,9 @@ import java.sql.Date;
 import java.util.Calendar;
 
 public class dummyDB {
+	String deps[] = {"Civil Engineering", "Rural Engineering", "Town Planning", "Land Survey"};
+	String cycles[] = {"Basic Technical", "Ordinary Technical", "Higher Technical"};
+	
 	dummyDB() {
 		dummyStudents();
 		dummyLecturers();
@@ -15,18 +18,19 @@ public class dummyDB {
 	private void dummyEnroll() {
 		enrollDB enrollDb = new enrollDB();
 		
-		enrollDb.onEnroll("CEF349", 1);
-		enrollDb.onEnroll("EEF347", 2);
-		enrollDb.onEnroll("EEF349", 2);
+		enrollDb.onEnroll("CEF349", 2);
+		enrollDb.onEnroll("EEF347", 1);
+		enrollDb.onEnroll("EEF349", 3);
+		enrollDb.onEnroll("CEF331", 2);
 	}
 	
 	private void dummyCourses() {
 		courseDB courseDb = new courseDB();
 		
-		courseDb.onAdd("CEF349", "Analysis", 1, "Computer", 4);
-		courseDb.onAdd("EEF347", "Machines", 2, "Electrical", 3);
-		courseDb.onAdd("CEF331", "Operating Systems", 3, "Computer", 2);
-		courseDb.onAdd("EEF349", "Control Engineering", 2, "Electrical", 1);
+		courseDb.onAdd("CEF349", "Analysis", 1, deps[0], 4);
+		courseDb.onAdd("EEF347", "Machines", 2, deps[0], 3);
+		courseDb.onAdd("CEF331", "Operating Systems", 2, deps[1], 2);
+		courseDb.onAdd("EEF349", "Control Engineering", 2, deps[2], 1);
 	}
 	
 	private void dummyStudents() {
@@ -47,7 +51,7 @@ public class dummyDB {
 			
 	    Date date=new Date(cal.getTimeInMillis());
 	    
-		student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Technical Cycle", "Electrical");
+		student.onAdd(email, pwd, name, date, sex, level, qualification, cycles[0], deps[0]);
 		
 		// 2
 		email = "example1@sdt.com";
@@ -63,7 +67,7 @@ public class dummyDB {
 			
 	    date = new Date(cal.getTimeInMillis());
 		
-	    student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Technical Cycle", "Computer");
+	    student.onAdd(email, pwd, name, date, sex, level, qualification, cycles[0], deps[1]);
 	    
 	    
 		// 3
@@ -80,7 +84,7 @@ public class dummyDB {
 			
 	    date = new Date(cal.getTimeInMillis());
 		
-	    student.onAdd(email, pwd, name, date, sex, level, qualification, 0, "Computer Cycle", "Electrical");
+	    student.onAdd(email, pwd, name, date, sex, level, qualification, cycles[1], deps[2]);
 	}
 	
 	private void dummyLecturers() {

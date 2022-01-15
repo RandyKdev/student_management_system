@@ -28,7 +28,7 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Button layoutX="510.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCreate" text="Add Course" />
+                  <Button layoutX="510.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCreate" style="-fx-background-color: #08ae54;" text="Add Course" textFill="WHITE" />
                </children>
             </AnchorPane>
         </content>

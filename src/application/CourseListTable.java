@@ -8,6 +8,24 @@ public class CourseListTable {
 	public String department;
 	public int credit_value;
 	public int lecturer;
+	public int marks;
+	
+	public CourseListTable(String code, String title, int marks) {
+		super();
+		this.code = code;
+		this.title = title;
+		this.marks = marks;
+	}
+	public int getMarks() {
+		return marks;
+	}
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+	public CourseListTable setMarks1(int marks) {
+		this.marks = marks;
+		return this;
+	}
 	public String getCode() {
 		return code;
 	}

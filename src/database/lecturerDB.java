@@ -9,12 +9,33 @@ import java.util.ArrayList;
 
 import application.CourseListTable;
 import application.Lecturer;
+import application.LecturerListTable;
 import application.StudentListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class lecturerDB {
-	public ObservableList<String> getLecturers() {
+	public ObservableList<LecturerListTable> getLecturers() {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql = "SELECT * FROM lecturer;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet result = statement.executeQuery();
+			
+			ObservableList<LecturerListTable> ls = FXCollections.observableArrayList();
+			
+			 while(result.next()) {
+				 ls.add(new LecturerListTable(result.getString("name"), result.getString("field"), result.getString("level"), result.getInt("uid")));
+			 }
+			 return ls;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public ObservableList<String> getLecturersName() {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
@@ -55,28 +76,29 @@ public class lecturerDB {
 			return null;
 		}
 	}
-	public boolean onLogin(String email, String pwd) {
+	public int onLogin(String email, String pwd) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql = "SELECT email, password FROM lecturer "
+			String sql = "SELECT * FROM lecturer "
 				     + "WHERE email = ? AND password = ?;";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, email);
 			statement.setString(2, pwd);
 			ResultSet result = statement.executeQuery();
 			
+			int r = 0;
 			if(result.next()) {
-				connection.close();
-				return true;
+//				connection.close();
+				r = result.getInt("uid");
 			}
 			
 			connection.close();
-			return false;
+			return r;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
+			return 0;
 		}
 	}
 	

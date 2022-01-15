@@ -44,8 +44,10 @@ public class LoginDecision {
 	@FXML
 	private void student(MouseEvent event) {
 		   studentDB userDB = new studentDB();
-		   boolean loggedIn = userDB.onLogin(email.trim(), pwd);
-		   if(loggedIn) {
+		   int loggedIn = userDB.onLogin(email.trim(), pwd);
+		   if(loggedIn > 0) {
+			   StudentDashboard ld = new StudentDashboard();
+			   ld.show(loggedIn);
 			   SuccessScreen successScreen = new SuccessScreen();
 			   successScreen.show("Successfully signed in as a student");
 			   ((Node)(event.getSource())).getScene().getWindow().hide();
@@ -59,8 +61,10 @@ public class LoginDecision {
 	@FXML
 	private void lecturer(MouseEvent event) {
 		   lecturerDB userDB = new lecturerDB();
-		   boolean loggedIn = userDB.onLogin(email.trim(), pwd);
-		   if(loggedIn) {
+		   int loggedIn = userDB.onLogin(email.trim(), pwd);
+		   if(loggedIn > 0) {
+			   LecturerDashboard ld = new LecturerDashboard();
+			   ld.show(loggedIn);
 			   SuccessScreen successScreen = new SuccessScreen();
 			   successScreen.show("Successfully signed in as a lecturer");
 			   ((Node)(event.getSource())).getScene().getWindow().hide();

@@ -12,7 +12,49 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class courseDB {
-	public ObservableList<StudentListTable> getCoursesFromDepartment(String department) {
+	public CourseListTable getCourse(String id) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM course "
+				     + "WHERE code = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, id);
+			
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) 
+			return new CourseListTable(result.getString("code"), result.getString("title"), 0);
+//			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+		return null;
+	}
+	
+	public String getDepartment(String id) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM course "
+				     + "WHERE code = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, id);
+			
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) 
+			return result.getString("department");
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public ObservableList<CourseListTable> getCoursesFromDepartment(String department) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
@@ -21,10 +63,10 @@ public class courseDB {
 			statement.setString(1, department);
 			ResultSet result = statement.executeQuery();
 			
-			ObservableList<StudentListTable> ls = FXCollections.observableArrayList();
+			ObservableList<CourseListTable> ls = FXCollections.observableArrayList();
 			
 			 while(result.next()) {
-				 ls.add(new StudentListTable(result.getInt("uid"), result.getString("name"), result.getInt("status"), result.getString("department"), result.getString("cycle"), result.getString("qualification")));
+				 ls.add(new CourseListTable(result.getString("code"), result.getString("title"), result.getString("department"), result.getInt("credit_value"), result.getInt("lecturer_id")));
 			 }
 			 return ls;
 		} catch (SQLException e) {

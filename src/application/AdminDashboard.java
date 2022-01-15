@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
@@ -16,6 +17,23 @@ public class AdminDashboard {
 		StudentList sl = new StudentList();
 		sl.show();
 	}
+	@FXML
+	private void show_courses(MouseEvent event) {
+		CourseList sl = new CourseList();
+		sl.show();
+	}
+	@FXML
+	private void show_lecturers(MouseEvent event) {
+		LecturerList sl = new LecturerList();
+		sl.show();
+	}
+	@FXML
+	private void onLogout(MouseEvent event) {
+		((Node)(event.getSource())).getScene().getWindow().hide();
+		LoginLogic lg = new LoginLogic();
+		
+		lg.show();
+	}
 	public void show() {
 		 Parent root;
 	        try {
@@ -25,7 +43,7 @@ public class AdminDashboard {
 	            loader.getController();
 	                       
 	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
-	            stage.setScene(new Scene(root, 779, 613));
+	            stage.setScene(new Scene(root, 600, 400));
 	            stage.show();
 	            
 	            // Hide this current window (if this is what you want)
