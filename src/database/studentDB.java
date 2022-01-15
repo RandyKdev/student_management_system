@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import application.CourseListTable;
 import application.Student;
 import application.StudentListTable;
 import javafx.collections.FXCollections;
@@ -15,6 +16,50 @@ import javafx.collections.ObservableList;
 import java.sql.Date;
 
 public class studentDB {
+	public ObservableList<StudentListTable> getStudentBasedonDep(String dep) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM student "
+				     + "WHERE department = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, dep);
+			
+			ResultSet result = statement.executeQuery();
+			
+			ObservableList<StudentListTable> ls = FXCollections.observableArrayList();
+			
+			 while(result.next()) {
+				 ls.add(new StudentListTable(result.getString("name"), result.getInt("uid"),  3));
+			 }
+			
+			return ls;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public String getDepartment(int id) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM student "
+				     + "WHERE uid = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, id);
+			
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) 
+			return result.getString("department");
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
 	public ObservableList<StudentListTable> getStudents() {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
@@ -35,28 +80,30 @@ public class studentDB {
 			return null;
 		}
 	}
-	public boolean onLogin(String email, String pwd) {
+	public int onLogin(String email, String pwd) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
-			String sql = "SELECT email, password FROM student "
+			String sql = "SELECT * FROM student "
 				     + "WHERE email = ? AND password = ?;";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, email);
 			statement.setString(2, pwd);
 			ResultSet result = statement.executeQuery();
 			
+			int r = 0;
 			if(result.next()) {
-				connection.close();
-				return true;
+				r = result.getInt("uid");
+//				connection.close();
+//				return true;
 			}
 			
 			connection.close();
-			return false;
+			return r;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
+			return 0;
 		}
 	}
 	
@@ -85,7 +132,34 @@ public class studentDB {
 		}
 	}
 	
-	public boolean onAdd(String email, String pwd, String name, Date dob, String sex, int level, String qualification, int status, String cycle, String department) {
+	public boolean isAdmitted(int uid) {
+		DBConnection con = new DBConnection();
+		Connection connection = con.getDbConnection();
+		try {
+			String sql =  "SELECT * FROM student "
+				     + "WHERE uid = ?;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, uid);
+			
+			ResultSet result = statement.executeQuery();
+			
+			boolean admit = false;
+			if(result.next()) {
+//				connection.close();
+//				return true;
+				admit = result.getInt("status") == 1 ? true : false;
+			}
+			
+			connection.close();
+			return admit;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean onAdd(String email, String pwd, String name, Date dob, String sex, int level, String qualification, String cycle, String department) {
 		DBConnection con = new DBConnection();
 		Connection connection = con.getDbConnection();
 		try {
@@ -101,7 +175,7 @@ public class studentDB {
 			statement.setString(5, sex);
 			statement.setInt(6, level);
 			statement.setString(7, qualification);
-			statement.setInt(8, status);
+			statement.setInt(8, 0);
 			statement.setString(9, cycle);
 			statement.setString(10, department);
 			
@@ -157,6 +231,30 @@ public class studentDB {
 			statement.execute();
 			
 			connection.close();
+			
+			if(status == 1) {
+				courseDB c = new courseDB();
+				studentDB cl = new studentDB();
+				ObservableList<CourseListTable> cls = c.getCoursesFromDepartment(cl.getDepartment(student_id));
+				
+				
+				enrollDB e = new enrollDB();
+				for(int i = 0; i < cls.toArray().length; i++) {
+					e.onEnroll(((CourseListTable) cls.toArray()[i]).code, student_id);
+				}	
+			} else {
+				courseDB c = new courseDB();
+				studentDB cl = new studentDB();
+				ObservableList<CourseListTable> cls = c.getCoursesFromDepartment(cl.getDepartment(student_id));
+				
+				
+				enrollDB e = new enrollDB();
+				for(int i = 0; i < cls.toArray().length; i++) {
+					e.onDelete(((CourseListTable) cls.toArray()[i]).code, student_id);
+				}
+			}
+			
+			
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

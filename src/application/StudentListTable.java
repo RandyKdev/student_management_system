@@ -7,6 +7,15 @@ public class StudentListTable {
 	public int status;
 	public String qualification;
 	public int student_id;
+	public int marks;
+	
+	public StudentListTable(String name, int student_id, int marks) {
+		super();
+		this.name = name;
+		this.student_id = student_id;
+		this.marks = marks;
+	}
+
 	public StudentListTable(int student_id, String name, int status, String department, String cycle, String qualification) {
 		this.name = name;
 		this.department = department;
@@ -17,6 +26,21 @@ public class StudentListTable {
 	}
 
 	
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+	
+	public StudentListTable setMarks1(int marks) {
+		this.marks = marks;
+		return this;
+	}
+	
+	
+
 	public int getStudent_id() {
 		return student_id;
 	}

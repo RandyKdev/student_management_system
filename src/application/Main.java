@@ -14,10 +14,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
-//			Scene scene = new Scene(root, 600, 400); // for login
-			Parent root = FXMLLoader.load(getClass().getResource("list_course.fxml")); // student list
-			Scene scene = new Scene(root, 600, 400); // student list
+			Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); // for login
+			Scene scene = new Scene(root, 600, 400); // for login
+//			Parent root = FXMLLoader.load(getClass().getResource("lecturer_dashboard.fxml")); // student list
+//			Scene scene = new Scene(root, 600, 400); // student list
 //			Parent root = FXMLLoader.load(getClass().getResource("error.fxml")); // for error
 //			Scene scene = new Scene(root, 640, 285); // for error
 //			Parent root = FXMLLoader.load(getClass().getResource("forgot_password.fxml")); // for forgot password

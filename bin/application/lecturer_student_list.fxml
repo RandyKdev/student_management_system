@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LecturerStudentList">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="597.0">
+               <children>
+                  <TableView fx:id="table" layoutY="54.0" prefHeight="462.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="uid_clm" prefWidth="67.0" text="id" />
+                      <TableColumn fx:id="name_clm" prefWidth="423.0" text="Name" />
+                        <TableColumn fx:id="marks_clm" prefWidth="108.0" text="Marks" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="6.0" text="Students">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

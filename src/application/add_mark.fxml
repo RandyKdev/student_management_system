@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMark">
+   <children>
+      <Label layoutX="161.0" layoutY="14.0" text="Input Mark">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mark_field" layoutX="147.0" layoutY="63.0" promptText="mark" />
+      <Button layoutX="173.0" layoutY="118.0" mnemonicParsing="false" onAction="#onDone" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #08ae54;" text="Done" textFill="WHITE" />
+   </children>
+</AnchorPane>

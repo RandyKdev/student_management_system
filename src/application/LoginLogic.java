@@ -1,9 +1,15 @@
 package application;
 
+import java.io.IOException;
+
 import database.adminDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginLogic {
 	public LoginLogic() {}
@@ -43,4 +49,24 @@ public class LoginLogic {
 		ForgotPassword forgotPassword = new ForgotPassword();
 		forgotPassword.show();
    }
+	
+	public void show() {
+		 Parent root;
+	        try {
+	        	FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+	            root = loader.load();
+	            
+	            loader.getController();
+	                       
+	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+	            stage.setScene(new Scene(root, 600, 400));
+	            stage.show();
+	            
+	            // Hide this current window (if this is what you want)
+//	            ((Node)(event.getSource())).getScene().getWindow().hide();
+	        }
+	        catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	}
 }

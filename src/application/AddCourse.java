@@ -39,6 +39,7 @@ public class AddCourse {
 	@FXML
 	private Button btn;
 	
+	private String oldcoursecode;
 	private TableView<CourseListTable> table;
 	private CourseListTable course;
 	private ObservableList<String> lecturers = FXCollections.observableArrayList();
@@ -78,11 +79,13 @@ public class AddCourse {
 		 department_field.setItems(FXCollections.observableArrayList(s));
 		 
 		lecturerDB lecturer = new lecturerDB();
-		lecturers = lecturer.getLecturers();
+		lecturers = lecturer.getLecturersName();
 		lecturer_field.setItems(lecturers);
 		
 		if(course != null) {
+			oldcoursecode = course.code;
 			code_field.setText(course.code);
+			code_field.setEditable(false);
 			title_field.setText(course.title);
 			department_field.setValue(course.department);
 //			department_field.setText(course.department);\
@@ -95,7 +98,24 @@ public class AddCourse {
 	
 	@FXML
 	private void onAdd(ActionEvent evt) {
+		if(course == null) {
+			courseDB crs = new courseDB();
+			crs.onAdd(code_field.getText(), title_field.getText(), lecturers.indexOf(lecturer_field.getValue()), department_field.getValue(), Integer.valueOf(credit_value_field.getText()));
+			((Node)(evt.getSource())).getScene().getWindow().hide();
+			CourseList cr = new CourseList();
+			cr.show();
+//			this.table.refresh();
+			return;
+		} else {
+			courseDB crs = new courseDB();
+			crs.update(oldcoursecode, title_field.getText(), department_field.getValue(), lecturers.indexOf(lecturer_field.getValue()), Integer.parseInt(credit_value_field.getText()));
+			((Node)(evt.getSource())).getScene().getWindow().hide();
+			CourseList cr = new CourseList();
+			cr.show();
+//			this.table.refresh();
+			return;
 		
+		}
 	}
 	
 }
