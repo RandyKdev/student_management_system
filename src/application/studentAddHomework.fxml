@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2539.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2494.0" layoutX="-1.0" layoutY="-127.0" stroke="BLACK" strokeType="INSIDE" width="736.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="228.0" layoutX="8.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="721.0" />
+      <Label layoutX="186.0" prefHeight="36.0" prefWidth="310.0" text="Student Checkout">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="46.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 80; -fx-background-radius: 80; -fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/student.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label text="Label" />
+      <Label layoutX="425.0" layoutY="109.0" prefHeight="26.0" prefWidth="275.0" text="Randy Kwalar Sussung" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="159.0" prefHeight="35.0" prefWidth="170.0" text="Basic Technical" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="210.0" prefHeight="35.0" prefWidth="179.0" text="Town Planning" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="377.0" layoutX="16.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="709.0" />
+      <Line endX="460.0" layoutX="246.0" layoutY="331.0" startX="-218.0" />
+      <Label layoutX="28.0" layoutY="340.0" prefHeight="35.0" prefWidth="211.0" text="O/L Results">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Line endX="521.0" layoutX="204.0" layoutY="444.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="205.0" layoutY="489.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="205.0" layoutY="541.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="202.0" layoutY="593.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="205.0" layoutY="648.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="201.0" layoutY="697.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="205.0" layoutY="740.0" startX="-188.0" />
+      <Line endX="-100.0" endY="310.0" layoutX="404.0" layoutY="460.0" startX="-100.0" startY="-67.0" />
+      <Line endX="-100.0" endY="310.0" layoutX="613.0" layoutY="459.0" startX="-100.0" startY="-67.0" />
+      <Label layoutX="54.0" layoutY="393.0" prefHeight="53.0" prefWidth="137.0" text="Subject" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="393.0" prefHeight="53.0" prefWidth="137.0" text="Grade" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="536.0" layoutY="393.0" prefHeight="53.0" prefWidth="137.0" text="Status" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="798.0" prefHeight="35.0" prefWidth="211.0" text="A/L Results">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="377.0" layoutX="13.0" layoutY="861.0" stroke="BLACK" strokeType="INSIDE" width="709.0" />
+      <Line endX="521.0" layoutX="201.0" layoutY="916.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="200.0" layoutY="972.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="200.0" layoutY="1033.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="205.0" layoutY="1087.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="201.0" layoutY="1143.0" startX="-188.0" />
+      <Line endX="521.0" layoutX="200.0" layoutY="1219.0" startX="-188.0" />
+      <Line endX="-100.0" endY="310.0" layoutX="404.0" layoutY="928.0" startX="-100.0" startY="-67.0" />
+      <Line endX="-100.0" endY="310.0" layoutX="612.0" layoutY="928.0" startX="-100.0" startY="-67.0" />
+      <Label layoutX="78.0" layoutY="861.0" prefHeight="53.0" prefWidth="137.0" text="Subject" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="861.0" prefHeight="53.0" prefWidth="137.0" text="Grade" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="570.0" layoutY="871.0" prefHeight="53.0" prefWidth="137.0" text="Status" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="1303.0" prefHeight="35.0" prefWidth="393.0" text="Approval letter from former school ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="460.0" layoutX="250.0" layoutY="790.0" startX="-218.0" />
+      <Line endX="460.0" layoutX="250.0" layoutY="1291.0" startX="-218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="447.0" layoutX="34.0" layoutY="1355.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="414.0" layoutX="34.0" layoutY="1836.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <Pane layoutX="372.0" layoutY="2283.0" prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: green; -fx-background-radius: 50; -fx-border-radius: 50;">
+         <children>
+            <Hyperlink layoutX="27.0" layoutY="15.0" prefHeight="35.0" prefWidth="159.0" text="Approve" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

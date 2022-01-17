@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="86.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="750.0" />
+      <Label layoutX="9.0" layoutY="9.0" prefHeight="61.0" prefWidth="333.0" text="Student Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="76.0" fitWidth="151.0" layoutX="609.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/setting.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="441.0" layoutX="1.0" layoutY="139.0" stroke="WHITE" strokeType="INSIDE" width="708.0" />
+      <Line endX="412.0" layoutX="306.0" layoutY="119.0" startX="-292.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="155.0" layoutX="62.0" layoutY="163.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="155.0" layoutX="478.0" layoutY="163.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="155.0" layoutX="62.0" layoutY="351.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="155.0" layoutX="478.0" layoutY="351.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a476f" height="40.0" layoutX="254.0" layoutY="518.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label text="Label" />
+      <Label layoutX="273.0" layoutY="524.0" prefHeight="29.0" prefWidth="163.0" text="Return Home" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="215.0" prefHeight="76.0" prefWidth="174.0" text="Apply  Course" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="504.0" layoutY="203.0" prefHeight="76.0" prefWidth="147.0" text="Check Marks" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="391.0" prefHeight="76.0" prefWidth="174.0" text="Check Notes" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="383.0" prefHeight="76.0" prefWidth="174.0" text="Time Table" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

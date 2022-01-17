@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="76.0" layoutX="11.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="729.0" />
+      <Label layoutX="169.0" layoutY="26.0" prefHeight="70.0" prefWidth="555.0" text="Create Course" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" layoutX="304.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" width="355.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" layoutX="304.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="355.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" layoutX="304.0" layoutY="307.0" stroke="BLACK" strokeType="INSIDE" width="355.0" />
+      <Label layoutX="21.0" layoutY="164.0" prefHeight="37.0" prefWidth="184.0" text="Course Code">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" layoutX="304.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" width="355.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab4f" height="43.0" layoutX="217.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="253.0" />
+      <Label layoutX="231.0" layoutY="481.0" prefHeight="30.0" prefWidth="225.0" text="Save Course" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="237.0" prefHeight="46.0" prefWidth="190.0" text="Course Name">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="306.0" prefHeight="37.0" prefWidth="184.0" text="Credit Value">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="381.0" prefHeight="37.0" prefWidth="184.0" text="Department">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
