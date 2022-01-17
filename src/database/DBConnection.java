@@ -11,6 +11,7 @@ public class DBConnection {
 	private String userName = "sdt";
 	private String pwd = "sdtproject";
 	private String dbName = "sunshine";
+	private String port = "3306";
 	
 	// instantiates Database
 	public void instantiateDB() throws SQLException {	
@@ -28,13 +29,13 @@ public class DBConnection {
 		}
 			
 		if(found) {
-			sql = "DROP DATABASE sunshine;";
+			sql = "DROP DATABASE " + dbName + ";";
 			statement.execute(sql);
 		}
 			
-		sql = "CREATE DATABASE sunshine;";
+		sql = "CREATE DATABASE " + dbName + ";";
 		statement.execute(sql);
-		sql = "use sunshine;";
+		sql = "use " + dbName + ";";
 		statement.execute(sql);
 		sql = "CREATE TABLE admin (uid INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, sex VARCHAR(1) NOT NULL, dob DATE NOT NULL, created_at DATE NOT NULL);";
 		statement.execute(sql);
@@ -53,11 +54,11 @@ public class DBConnection {
 		connection.close();
 	}
 	
-	// gets sunshine db connection
+	// gets db connection
 	public Connection getDbConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+dbName, userName, pwd);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:" + port + "/" + dbName, userName, pwd);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -74,7 +75,7 @@ public class DBConnection {
 	private void createConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", userName, pwd);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:" + port + "/", userName, pwd);
 			if(connection== null) throw new SQLException("Error creating connection to db");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

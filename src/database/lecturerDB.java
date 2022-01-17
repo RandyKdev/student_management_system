@@ -5,12 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
-import application.CourseListTable;
-import application.Lecturer;
 import application.LecturerListTable;
-import application.StudentListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -44,8 +39,6 @@ public class lecturerDB {
 			ResultSet result = statement.executeQuery();
 			
 			ObservableList<String> ls = FXCollections.observableArrayList();
-//			ArrayList<Lecturer> ls = new ArrayList<Lecturer>();
-			
 			 while(result.next()) {
 				 ls.add(result.getString("name"));
 			 }

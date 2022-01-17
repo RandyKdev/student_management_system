@@ -4,11 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import application.CourseListTable;
-import application.Student;
 import application.StudentListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -94,8 +90,6 @@ public class studentDB {
 			int r = 0;
 			if(result.next()) {
 				r = result.getInt("uid");
-//				connection.close();
-//				return true;
 			}
 			
 			connection.close();
@@ -145,8 +139,6 @@ public class studentDB {
 			
 			boolean admit = false;
 			if(result.next()) {
-//				connection.close();
-//				return true;
 				admit = result.getInt("status") == 1 ? true : false;
 			}
 			

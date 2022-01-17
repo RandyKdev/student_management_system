@@ -1,11 +1,9 @@
 package database;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import application.CourseListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,7 +21,6 @@ public class enrollDB {
 			ResultSet result = statement.executeQuery();
 			ObservableList<CourseListTable> ls = FXCollections.observableArrayList();
 			
-//			int r = 0;
 			while(result.next()) {
 				courseDB cdb = new courseDB();
 				ls.add(cdb.getCourse(result.getString("course_id")).setMarks1(result.getInt("marks")));
@@ -52,9 +49,7 @@ public class enrollDB {
 			
 			int r = 0;
 			if(result.next()) {
-//				connection.close();
 				r = result.getInt("marks");
-//				return result.getInt("marks");
 				
 			}
 			

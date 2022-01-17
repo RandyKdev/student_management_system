@@ -1,14 +1,12 @@
 package application;
 
 import java.io.IOException;
-
 import database.enrollDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -52,12 +50,10 @@ public class AddMark {
            
             add.set(student_id, course_code,  edb.getMark(course_code, student_id), event);
                        
-            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+            Stage stage = new Stage(); 
             stage.setScene(new Scene(root, 443, 175));
             stage.show();
             
-            // Hide this current window (if this is what you want)
-//            ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         catch (IOException e) {
             e.printStackTrace();

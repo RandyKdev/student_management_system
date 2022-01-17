@@ -17,7 +17,7 @@ import javafx.event.ActionEvent;
 
 public class NewPassword {
 	public String email;
-	public int auth; // 1 = admin, 2 = lecturer, 3 = student
+	public int auth;
 	@FXML
 	private PasswordField pwd_field;
 	@FXML
@@ -67,12 +67,10 @@ public class NewPassword {
 	            newPassword.auth = auth;
 	            newPassword.email = emailGiven;
 	            
-	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+	            Stage stage = new Stage();
 	            stage.setScene(new Scene(root, 600, 237));
 	            stage.show();
 	            
-	            // Hide this current window (if this is what you want)
-//	            ((Node)(event.getSource())).getScene().getWindow().hide();
 	        }
 	        catch (IOException e) {
 	            e.printStackTrace();

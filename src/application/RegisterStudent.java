@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Calendar;
-
-import database.adminDB;
-import database.lecturerDB;
 import database.studentDB;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -176,12 +173,9 @@ public class RegisterStudent {
 	            RegisterStudent registerStudent = loader.getController();
 	            registerStudent.setComboBox();
 	            
-	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+	            Stage stage = new Stage(); 
 	            stage.setScene(new Scene(root, 600, 400));
 	            stage.show();
-	            
-//	            Hide this current window (if this is what you want)
-//	            ((Node)(event.getSource())).getScene().getWindow().hide();
 	        }
 	        catch (IOException e) {
 	            e.printStackTrace();

@@ -6,13 +6,10 @@ import database.adminDB;
 import database.lecturerDB;
 import database.studentDB;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.*;
 
@@ -87,12 +84,9 @@ public class LoginDecision {
 	            loginDecision.pwd = pwdGiven;
 	            loginDecision.previousEvent = event;
 	        	           
-	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+	            Stage stage = new Stage(); 
 	            stage.setScene(new Scene(root, 588, 324));
 	            stage.show();
-	            
-	            // Hide this current window (if this is what you want)
-//	            ((Node)(event.getSource())).getScene().getWindow().hide();
 	        }
 	        catch (IOException e) {
 	            e.printStackTrace();
