@@ -19,7 +19,6 @@ public class ForgotPassword {
 		String email = email_field.getText();
 		
 		if(!EmailValidator.isValid(email)) {
-//			   return;
 			   ErrorScreen errorScreen = new ErrorScreen();
 			   errorScreen.show("Email not in right format", "Try entering a correct email");
 			   return;
@@ -37,12 +36,10 @@ public class ForgotPassword {
 	            
 	            loader.getController();
 	                       
-	            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+	            Stage stage = new Stage();
 	            stage.setScene(new Scene(root, 699, 249));
 	            stage.show();
 	            
-	            // Hide this current window (if this is what you want)
-//	            ((Node)(event.getSource())).getScene().getWindow().hide();
 	        }
 	        catch (IOException e) {
 	            e.printStackTrace();

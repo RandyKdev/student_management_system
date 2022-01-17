@@ -5,9 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import application.CourseListTable;
-import application.StudentListTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -25,7 +23,7 @@ public class courseDB {
 			
 			if (result.next()) 
 			return new CourseListTable(result.getString("code"), result.getString("title"), 0);
-//			return null;
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

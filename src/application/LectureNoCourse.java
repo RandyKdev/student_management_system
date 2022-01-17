@@ -25,12 +25,9 @@ public class LectureNoCourse {
             
             loader.getController();
                        
-            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+            Stage stage = new Stage();
             stage.setScene(new Scene(root,  640, 285));
             stage.show();
-            
-            // Hide this current window (if this is what you want)
-//            ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         catch (IOException e) {
             e.printStackTrace();

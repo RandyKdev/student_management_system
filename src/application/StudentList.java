@@ -2,9 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-
 import database.studentDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -48,12 +46,9 @@ public class StudentList implements Initializable {
             
             loader.getController();
                        
-            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+            Stage stage = new Stage();
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
-            
-            // Hide this current window (if this is what you want)
-//            ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -85,7 +80,6 @@ public class StudentList implements Initializable {
 		            if (node instanceof TableRow) {
 		                row = (TableRow) node;
 		            } else {
-		                // clicking on text part
 		                row = (TableRow) node.getParent();
 		            }
 		            studentDB student = new studentDB();
